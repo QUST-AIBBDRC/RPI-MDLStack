@@ -12,13 +12,13 @@ RPI-MDLStack: predicting RNA-protein interactions through deep learning with sta
 
 ###Guiding principles: 
 
-**The dataset file contains six datasets, among which RPI488, RPI369, RPI2241, RPI1807, RPI1446, NPInter v3.0.
+*** The dataset file contains six datasets, among which RPI488, RPI369, RPI2241, RPI1807, RPI1446, NPInter v3.0.
 
-**Feature extraction
+*** Feature extraction
    feature-RNA is the implementation of kmer, AASC-DC, PseDNC and PseSSC for RNA.
    feature-protein is the implementation of CT, GTPC, PseAAC and RPT for protein.
    
-** Feature selection:
+*** Feature selection:
    EN_selection is the implementation of elastic net.
    ET_selection is the implementation of extra-trees.
    LASSO_selection is the implementation of LASSO.
@@ -30,7 +30,7 @@ RPI-MDLStack: predicting RNA-protein interactions through deep learning with sta
    SE_selection is the implementation of spectral embedding.
    TSVD_selection is the implementation of truncated singular value decomposition.
  
-** Classifier:
+*** Classifier:
    RPI-MDLStack_model.py is the implementation of our model in this work. 
    DNN_singleclassifier.py is the implementation of deep neural network as a single classifier.
    GRU_singleclassifier.py is the implementation of gated recurrent unit as a single classifier.
