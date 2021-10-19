@@ -49,12 +49,12 @@ def calculate_performace(test_num, pred_y,  labels):
 
 def get_CNN_model(input_dim,out_dim):
     model = Sequential()
-    model.add(Conv1D(filters = 256, kernel_size = 3, padding = 'same', activation= 'relu'))
+    model.add(Conv1D(filters = 64, kernel_size = 3, padding = 'same', activation= 'relu'))
     model.add(AveragePooling1D(pool_size=2,strides=1,padding="SAME"))
-    model.add(Conv1D(filters = 256, kernel_size =  3, padding = 'same', activation= 'relu'))
+    model.add(Conv1D(filters = 64, kernel_size =  3, padding = 'same', activation= 'relu'))
     model.add(AveragePooling1D(pool_size=2,strides=1,padding="SAME"))
     model.add(Flatten())
-    model.add(Dense(int(128), activation = 'relu'))
+    model.add(Dense(int(32), activation = 'relu'))
     model.add(Dense(out_dim, activation = 'softmax',name="Dense_2"))
     model.compile(loss = 'categorical_crossentropy', optimizer = 'Adam', metrics =['accuracy'])
     return model
