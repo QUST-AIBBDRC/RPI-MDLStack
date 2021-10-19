@@ -52,7 +52,7 @@ def get_RNN_model(input_dim, out_dim):
     model.add(SimpleRNN(64, return_sequences=True, input_shape=(1, input_dim)))
     model.add(Dropout(0.05))
     model.add(Flatten())
-    model.add(Dense(128, activation='relu', name="Dense_256"))
+    model.add(Dense(32, activation='relu', name="Dense_256"))
     model.add(Dropout(0.05))
     model.add(Dense(2, activation='softmax', name="Dense_2"))
     model.compile(loss='binary_crossentropy', optimizer='Adam',
