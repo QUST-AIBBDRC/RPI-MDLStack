@@ -50,12 +50,12 @@ def calculate_performace(test_num, pred_y,  labels):
 
 def get_DNN_model(input_dim,out_dim):
     model = Sequential()
-    model.add(Dense(int(128), activation='relu', init='glorot_normal', name='High_dim_feature_1',input_shape=(1,input_dim)))
+    model.add(Dense(int(64), activation='relu', init='glorot_normal', name='High_dim_feature_1',input_shape=(1,input_dim)))
     model.add(Dropout(0.05))
-    model.add(Dense(int(128), activation='relu', init='glorot_normal', name='High_dim_feature_2'))
+    model.add(Dense(int(64), activation='relu', init='glorot_normal', name='High_dim_feature_2'))
     model.add(Dropout(0.05))
     model.add(Flatten())
-    model.add(Dense(int(64), activation='relu', init='glorot_normal', name='High_dim_feature'))
+    model.add(Dense(int(32), activation='relu', init='glorot_normal', name='High_dim_feature'))
     model.add(Dropout(0.05))
     model.add(Dense(2, activation='softmax', name='output'))
     model.compile(loss = 'categorical_crossentropy', optimizer = 'Adam', metrics =['accuracy'])#rmsprop
